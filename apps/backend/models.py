@@ -46,5 +46,8 @@ class Employee(models.Model):
         verbose_name = _('employee')
         verbose_name_plural = _('employees')
 
+    def get_full_name(self):
+        return ' '.join([self.first_name, self.last_name])
+
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
