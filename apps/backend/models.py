@@ -2,9 +2,6 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
-# Create your models here.
-
-
 class Department(models.Model):
     name = models.CharField(_('Name of department'), max_length=255)
     floor = models.IntegerField(_('Floor of the department'))
